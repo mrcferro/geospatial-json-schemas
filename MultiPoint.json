@@ -1,0 +1,25 @@
+{
+  "bsonType": "object",
+  "required": [
+    "bsonType",
+    "coordinates"
+  ],
+  "properties": {
+    "bsonType": {
+      "bsonType": "string",
+      "enum": [
+        "MultiPoint"
+      ]
+    },
+    "coordinates": {
+      "bsonType": "array",
+      "items": {
+        "bsonType": "array",
+        "minItems": 2,
+        "items": {
+          "bsonType": "number"
+        }
+      }
+    }
+  }
+}

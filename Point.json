@@ -1,0 +1,22 @@
+{
+  "bsonType": "object",
+  "required": [
+    "bsonType",
+    "coordinates"
+  ],
+  "properties": {
+    "bsonType": {
+      "bsonType": "string",
+      "enum": [
+        "Point"
+      ]
+    },
+    "coordinates": {
+      "bsonType": "array",
+      "minItems": 2,
+      "items": {
+        "bsonType": "number"
+      }
+    }
+  }
+}

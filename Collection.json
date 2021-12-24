@@ -1,0 +1,185 @@
+{
+  "bsonType": "object",
+  "required": [
+    "bsonType",
+    "geometries"
+  ],
+  "properties": {
+    "bsonType": {
+      "bsonType": "string",
+      "enum": [
+        "GeometryCollection"
+      ]
+    },
+    "geometries": {
+      "bsonType": "array",
+      "items": {
+        "oneOf": [
+          {
+            "bsonType": "object",
+            "required": [
+              "bsonType",
+              "coordinates"
+            ],
+            "properties": {
+              "bsonType": {
+                "bsonType": "string",
+                "enum": [
+                  "Point"
+                ]
+              },
+              "coordinates": {
+                "bsonType": "array",
+                "minItems": 2,
+                "items": {
+                  "bsonType": "number"
+                }
+              }
+            }
+          },
+          {
+            "bsonType": "object",
+            "required": [
+              "bsonType",
+              "coordinates"
+            ],
+            "properties": {
+              "bsonType": {
+                "bsonType": "string",
+                "enum": [
+                  "LineString"
+                ]
+              },
+              "coordinates": {
+                "bsonType": "array",
+                "minItems": 2,
+                "items": {
+                  "bsonType": "array",
+                  "minItems": 2,
+                  "items": {
+                    "bsonType": "number"
+                  }
+                }
+              }
+            }
+          },
+          {
+            "bsonType": "object",
+            "required": [
+              "bsonType",
+              "coordinates"
+            ],
+            "properties": {
+              "bsonType": {
+                "bsonType": "string",
+                "enum": [
+                  "Polygon"
+                ]
+              },
+              "coordinates": {
+                "bsonType": "array",
+                "items": {
+                  "bsonType": "array",
+                  "minItems": 4,
+                  "items": {
+                    "bsonType": "array",
+                    "minItems": 2,
+                    "items": {
+                      "bsonType": "number"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          {
+            "bsonType": "object",
+            "required": [
+              "bsonType",
+              "coordinates"
+            ],
+            "properties": {
+              "bsonType": {
+                "bsonType": "string",
+                "enum": [
+                  "MultiPoint"
+                ]
+              },
+              "coordinates": {
+                "bsonType": "array",
+                "items": {
+                  "bsonType": "array",
+                  "minItems": 2,
+                  "items": {
+                    "bsonType": "number"
+                  }
+                }
+              }
+            }
+          },
+          {
+            "bsonType": "object",
+            "required": [
+              "bsonType",
+              "coordinates"
+            ],
+            "properties": {
+              "bsonType": {
+                "bsonType": "string",
+                "enum": [
+                  "MultiLineString"
+                ]
+              },
+              "coordinates": {
+                "bsonType": "array",
+                "items": {
+                  "bsonType": "array",
+                  "minItems": 2,
+                  "items": {
+                    "bsonType": "array",
+                    "minItems": 2,
+                    "items": {
+                      "bsonType": "number"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          {
+            "bsonType": "object",
+            "required": [
+              "bsonType",
+              "coordinates"
+            ],
+            "properties": {
+              "bsonType": {
+                "bsonType": "string",
+                "enum": [
+                  "MultiPolygon"
+                ]
+              },
+              "coordinates": {
+                "bsonType": "array",
+                "items": {
+                  "bsonType": "array",
+                  "items": {
+                    "bsonType": "array",
+                    "minItems": 4,
+                    "items": {
+                      "bsonType": "array",
+                      "minItems": 2,
+                      "items": {
+                        "bsonType": "number"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  }
+}
